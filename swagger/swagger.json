@@ -1,0 +1,90 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger practice by json",
+    "description": "json 파일로 swagger api 문서 작성하기",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "name": "contact할 곳 이름",
+      "email": "이메일",
+      "url": "주소"
+    },
+    "license": {
+      "name": "라이선스 이름",
+      "url": "라이선스 주소"
+    }
+  },
+  "host": "host 주소",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/auth/token": {
+      "get": {
+        "tags": ["접속"],
+        "description": "접속 token을 획득",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "아이디",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "성공",
+            "schema": {
+              "$ref": "#/definitions/auth_token"
+            }
+          },
+          "400": {
+            "description": "실패",
+            "schema": {
+              "$ref": "#/definitions/default_error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "auth_token": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "token": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "default_error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+            "msg": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
