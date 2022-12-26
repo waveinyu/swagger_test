@@ -2,13 +2,9 @@
 
 협업을 위한 API 문서 자동화 Swagger 연습하기
 
----
-
 <br>
 
 ## **형식 주석**을 이용한 작성
-
-<br>
 
 step 1. swagger/swagger.js 폴더 및 파일 생성
 
