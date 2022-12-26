@@ -12,7 +12,7 @@
   "dependencies": {
     "epxress": "^0.0.1-security",
     "nodemon": "^2.0.20",
-    "swagger-jsdoc": "^6.2.7",
-    "swagger-ui-express": "^4.6.0"
+    "swagger-ui-express": "^4.6.0",
+    "uninstall": "^0.0.0"
   }
 }
