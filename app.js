@@ -9,6 +9,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger/swagger.json");
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// :::::::: json 형식 :::::::::
 
 // :::::::: 형식 주석 :::::::::
 // const { swaggerUi, specs } = require("./swagger/swagger");
