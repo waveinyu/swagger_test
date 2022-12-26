@@ -13,6 +13,35 @@ app.use(
   swaggerUi.setup(specs, { explorer: true })
 );
 
+/* GET sign in page. */
+/**
+ * @swagger
+ * paths:
+ *  /signin:
+ *   get:
+ *     tags: [SignIn]
+ *     summary: 로그인 페이지
+ *     responses:
+ *       "200":
+ *         description: 로그인 페이지 로드 성공
+ *   post:
+ *     tags: [SignIn]
+ *     summary: 로그인 로직 처리
+ *     parameters:
+ *       - name: code
+ *         in: Post
+ *         type: string
+ *         description: 로그인 정보(아이디)
+ *     responses:
+ *       "200":
+ *         discription: 로그인 성공
+ *         contnet:
+ *           application:json
+ *       "400":
+ *         discription: 잘못된 파라메타 전달
+ *
+ */
+
 app.get("/", (req, res) => {
   res.send("this is root page");
 });
