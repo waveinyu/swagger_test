@@ -1,3 +1,4 @@
+// 형식주석
 const swaggerUi = require("swagger-ui-express"); // api 문서 UI 렌더링 패키지
 const swaggerJsdocs = require("swagger-jsdoc"); // swagger 태그 주석 추가하여 api 문서화 패키지
 
